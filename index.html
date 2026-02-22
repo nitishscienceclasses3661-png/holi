@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Holi 2026</title>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background: linear-gradient(270deg, #ff0080, #ff8c00, #40e0d0, #ff0080);
+    background-size: 800% 800%;
+    animation: gradientBG 15s ease infinite;
+    overflow:hidden;
+}
+
+/* Animated Gradient Background */
+@keyframes gradientBG {
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+.container{
+    text-align:center;
+    color:white;
+}
+
+h1{
+    font-size:70px;
+    text-transform:uppercase;
+    letter-spacing:5px;
+    animation: glow 2s infinite alternate;
+}
+
+@keyframes glow{
+    from{
+        text-shadow:0 0 10px #fff, 0 0 20px #ff00ff, 0 0 30px #ff0080;
+    }
+    to{
+        text-shadow:0 0 20px #fff, 0 0 40px #00ffff, 0 0 60px #ff8c00;
+    }
+}
+
+p{
+    font-size:22px;
+    margin-top:20px;
+    animation: fadeIn 3s ease-in-out infinite alternate;
+}
+
+@keyframes fadeIn{
+    from{opacity:0.6;}
+    to{opacity:1;}
+}
+
+/* Color Splash Circles */
+.circle{
+    position:absolute;
+    border-radius:50%;
+    opacity:0.6;
+    animation: float 8s infinite ease-in-out;
+}
+
+@keyframes float{
+    0%{transform:translateY(0px);}
+    50%{transform:translateY(-100px);}
+    100%{transform:translateY(0px);}
+}
+
+.circle:nth-child(1){
+    width:200px;
+    height:200px;
+    background:#ff0080;
+    top:10%;
+    left:15%;
+}
+
+.circle:nth-child(2){
+    width:150px;
+    height:150px;
+    background:#00ffff;
+    bottom:10%;
+    right:20%;
+    animation-duration:6s;
+}
+
+.circle:nth-child(3){
+    width:100px;
+    height:100px;
+    background:#ff8c00;
+    top:70%;
+    left:40%;
+    animation-duration:10s;
+}
+
+button{
+    margin-top:30px;
+    padding:12px 30px;
+    font-size:18px;
+    border:none;
+    border-radius:25px;
+    background:white;
+    color:#ff0080;
+    cursor:pointer;
+    transition:0.4s;
+}
+
+button:hover{
+    background:#ff0080;
+    color:white;
+    transform:scale(1.1);
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+
+<div class="container">
+    <h1>Happy Holi 🎉</h1>
+    <p>May your life be filled with colors of happiness and joy!</p>
+    <button onclick="playMusic()">Celebrate 🎶</button>
+</div>
+
+<!-- Optional Holi Music -->
+<audio id="holiMusic" src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"></audio>
+
+<script>
+function playMusic(){
+    document.getElementById("holiMusic").play();
+}
+</script>
+
+</body>
+</html>
